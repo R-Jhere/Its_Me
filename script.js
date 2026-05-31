@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Initialize dark mode: check localStorage, then OS preference
+    // Initialize dark mode: check localStorage, default to light mode
     function initDarkMode() {
         let savedTheme = null;
         try {
@@ -94,12 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (savedTheme === 'dark') {
             applyDarkMode(true);
-        } else if (savedTheme === 'light') {
-            applyDarkMode(false);
         } else {
-            // Follow OS preference
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            applyDarkMode(prefersDark);
+            // Default to light mode
+            applyDarkMode(false);
         }
     }
 

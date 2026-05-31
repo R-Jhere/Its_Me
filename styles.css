@@ -164,6 +164,7 @@ html.dark #experience .border-l-4.border-black {
 html.dark #experience .bg-white {
     background-color: #1a1a1a;
     color: #FFFDF5;
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 html.dark #experience .border-dashed.border-gray-300 {
@@ -175,7 +176,17 @@ html.dark #experience h3 {
 }
 
 html.dark #experience ul {
-    color: #a1a1aa;
+    color: #c4c4c8;
+}
+
+/* Experience timeline dot */
+html.dark #experience .border-4.border-black {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Experience date badge */
+html.dark #experience .bg-neo-black.text-white {
+    background-color: #2a2a2a;
 }
 
 /* --- Projects Section --- */
@@ -186,6 +197,7 @@ html.dark #projects {
 html.dark #projects article {
     background-color: #1a1a1a;
     color: #FFFDF5;
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 html.dark #projects h3 {
@@ -198,6 +210,54 @@ html.dark #projects p {
 
 html.dark #projects .shadow-hard {
     box-shadow: 6px 6px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Project cards: tech tags in dark mode */
+html.dark #projects .bg-neo-black.text-white {
+    background-color: #2a2a2a;
+    color: #FFFDF5;
+}
+
+/* Project card action buttons borders */
+html.dark #projects .project-actions a {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Project badge border */
+html.dark .project-badge {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* "Selected Works" heading stroke fix */
+html.dark #projects .text-stroke-brutal {
+    -webkit-text-stroke: 3px #FFFDF5;
+}
+
+/* "VIEW ALL REPOS" button */
+html.dark #projects .bg-neo-black.text-white.border-4 {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+html.dark #projects .bg-neo-black.text-white.border-4:hover {
+    background-color: #FFFDF5;
+    color: #121212;
+}
+
+/* --- Hero section border + background in dark mode --- */
+html.dark .border-b-4.border-black {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+html.dark .border-t-4.border-black {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+html.dark .border-y-4.border-black {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+html.dark .border-x-4.border-black {
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
 /* --- Contact Section --- */
@@ -234,6 +294,22 @@ html.dark #contact input:focus,
 html.dark #contact textarea:focus {
     background-color: #FBFF48;
     color: #000;
+}
+
+/* Contact form bg */
+html.dark #contact .bg-gray-50 {
+    background-color: #0a0a0a;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Contact email link */
+html.dark #contact a {
+    color: #FFFDF5;
+}
+
+/* Contact icon boxes */
+html.dark #contact .bg-neo-black.text-white.border-2 {
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* --- Footer (already dark, just ensure consistency) --- */
