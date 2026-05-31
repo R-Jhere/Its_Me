@@ -1,0 +1,795 @@
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
+/* Smooth scrolling (overridden in reduced-motion) */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (pointer: fine) {
+    body {
+        cursor: none;
+    }
+}
+
+body {
+    background-color: #FFFDF5;
+    background-image:
+        radial-gradient(#000 1px, transparent 1px),
+        linear-gradient(to right, #e5e5e5 1px, transparent 1px),
+        linear-gradient(to bottom, #e5e5e5 1px, transparent 1px);
+    background-size: 40px 40px, 100px 100px, 100px 100px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ========================================
+   DARK MODE — Comprehensive Overrides
+   ======================================== */
+html.dark body {
+    background-color: #0a0a0a;
+    background-image:
+        radial-gradient(#333 1px, transparent 1px),
+        linear-gradient(to right, #1a1a1a 1px, transparent 1px),
+        linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
+    color: #FFFDF5;
+}
+
+/* --- Scrollbar --- */
+html.dark ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+    background: #FBFF48;
+    border-color: #FBFF48;
+}
+
+html.dark * {
+    scrollbar-color: #FBFF48 #0a0a0a;
+}
+
+/* --- Global: borders that were border-black → lighter --- */
+html.dark .border-black {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+html.dark .border-b-4.border-black,
+html.dark .border-t-4.border-black,
+html.dark .border-x-4.border-black,
+html.dark .border-l-4.border-black {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Global: bg-white elements → dark bg --- */
+html.dark .bg-white {
+    background-color: #1a1a1a;
+}
+
+html.dark .bg-neo-white {
+    background-color: #1a1a1a;
+}
+
+/* --- Global: text-black → white (but not on colored bg buttons) --- */
+html.dark .text-neo-black {
+    color: #FFFDF5;
+}
+
+/* --- Global: gray text readability --- */
+html.dark .text-gray-600 {
+    color: #9ca3af;
+}
+
+html.dark .text-gray-700 {
+    color: #9ca3af;
+}
+
+html.dark .text-gray-500 {
+    color: #9ca3af;
+}
+
+html.dark .text-gray-400 {
+    color: #a1a1aa;
+}
+
+html.dark .bg-gray-50 {
+    background-color: #111111;
+}
+
+html.dark .bg-gray-200 {
+    background-color: #2a2a2a;
+}
+
+/* --- Navbar --- */
+html.dark nav .bg-neo-white {
+    background-color: #1a1a1a;
+    color: #FFFDF5;
+}
+
+/* --- Hero Section --- */
+/* Remove mix-blend-darken which makes text invisible on dark bg */
+html.dark .mix-blend-darken {
+    mix-blend-mode: normal;
+    color: #FFFDF5;
+}
+
+/* Text stroke: black stroke invisible on dark bg → white stroke */
+html.dark .text-stroke-brutal {
+    -webkit-text-stroke: 3px #FFFDF5;
+    color: transparent;
+}
+
+/* Hero SYSTEM STATUS pill */
+html.dark .bg-neo-white.border-2 {
+    background-color: #1a1a1a;
+    color: #FFFDF5;
+}
+
+/* Hero buttons */
+html.dark .bg-black.text-white.border-2.border-black {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* --- About Section --- */
+html.dark #about {
+    background-color: #111111;
+    color: #FFFDF5;
+}
+
+html.dark #about .border-l-4.border-neo-purple {
+    border-color: #A855F7;
+}
+
+/* Keep text high-contrast black on bright NeoBrutalist backgrounds in dark mode */
+html.dark .bg-neo-yellow,
+html.dark .bg-neo-yellow *,
+html.dark .bg-neo-green,
+html.dark .bg-neo-green *,
+html.dark .bg-neo-pink,
+html.dark .bg-neo-pink *,
+html.dark .bg-neo-orange,
+html.dark .bg-neo-orange * {
+    color: #121212 !important;
+}
+
+/* --- Experience Section --- */
+html.dark #experience {
+    color: #FFFDF5;
+}
+
+html.dark #experience .border-l-4.border-black {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+html.dark #experience .bg-white {
+    background-color: #1a1a1a;
+    color: #FFFDF5;
+}
+
+html.dark #experience .border-dashed.border-gray-300 {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+html.dark #experience h3 {
+    color: #FFFDF5;
+}
+
+html.dark #experience ul {
+    color: #a1a1aa;
+}
+
+/* --- Projects Section --- */
+html.dark #projects {
+    background-color: #1a1a00;
+}
+
+html.dark #projects article {
+    background-color: #1a1a1a;
+    color: #FFFDF5;
+}
+
+html.dark #projects h3 {
+    color: #FFFDF5;
+}
+
+html.dark #projects p {
+    color: #a1a1aa;
+}
+
+html.dark #projects .shadow-hard {
+    box-shadow: 6px 6px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* --- Contact Section --- */
+html.dark #contact {
+    color: #FFFDF5;
+}
+
+html.dark #contact .bg-white {
+    background-color: #111111;
+    color: #FFFDF5;
+}
+
+html.dark #contact h2 {
+    color: #FFFDF5;
+}
+
+html.dark #contact .text-gray-600 {
+    color: #9ca3af;
+}
+
+html.dark #contact input,
+html.dark #contact textarea {
+    background-color: #1a1a1a;
+    color: #FFFDF5;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+html.dark #contact input::placeholder,
+html.dark #contact textarea::placeholder {
+    color: #6b7280;
+}
+
+html.dark #contact input:focus,
+html.dark #contact textarea:focus {
+    background-color: #FBFF48;
+    color: #000;
+}
+
+/* --- Footer (already dark, just ensure consistency) --- */
+html.dark footer {
+    background-color: #050505;
+}
+
+/* --- Shadow overrides: black shadows invisible on dark bg --- */
+html.dark .shadow-hard {
+    box-shadow: 6px 6px 0 rgba(255, 255, 255, 0.1);
+}
+
+html.dark .shadow-hard-sm {
+    box-shadow: 3px 3px 0 rgba(255, 255, 255, 0.1);
+}
+
+html.dark .shadow-hard-lg {
+    box-shadow: 10px 10px 0 rgba(255, 255, 255, 0.1);
+}
+
+html.dark .shadow-hard-xl {
+    box-shadow: 12px 12px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* --- Mobile menu --- */
+html.dark #mobileMenu .bg-neo-white {
+    background-color: #111111;
+    color: #FFFDF5;
+}
+
+html.dark #mobileMenu a {
+    color: #FFFDF5;
+}
+
+html.dark #mobileMenu .bg-white {
+    background-color: #1a1a1a;
+}
+
+/* --- Selection color in dark mode --- */
+html.dark ::selection {
+    background-color: #FBFF48;
+    color: #000;
+}
+
+/* Dark mode toggle button */
+#darkModeToggle,
+#darkModeToggleMobile {
+    transition: transform 0.3s ease, background-color 0.2s ease;
+}
+
+#darkModeToggle:hover,
+#darkModeToggleMobile:hover {
+    transform: rotate(30deg) scale(1.1);
+}
+
+#darkModeToggle .ri-sun-line,
+#darkModeToggle .ri-moon-line,
+#darkModeToggleMobile .ri-sun-line,
+#darkModeToggleMobile .ri-moon-line {
+    transition: opacity 0.2s ease;
+}
+
+/* ========================================
+   CUSTOM CURSOR
+   ======================================== */
+#cursor {
+    pointer-events: none;
+    position: fixed;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: width 0.2s, height 0.2s, background-color 0.2s, transform 0.1s;
+}
+
+/* ========================================
+   CUSTOM SCROLLBAR (RJ_CREATES)
+   ======================================== */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFFDF5;
+    border-left: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000;
+    border: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FF2A2A;
+}
+
+/* Firefox scrollbar */
+html,
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #000 #FFFDF5;
+}
+
+/* ========================================
+   PROGRESS BAR
+   ======================================== */
+#progressBar {
+    will-change: width;
+    transition: width 0.05s linear;
+}
+
+/* ========================================
+   ANIMATIONS — MARQUEE
+   ======================================== */
+.marquee-container {
+    overflow: hidden;
+}
+
+.marquee-content {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    width: max-content;
+    will-change: transform;
+}
+
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* Milestone cards marquee — CSS primary, JS enhances when loaded */
+#reports .marquee-content {
+    animation: scroll 15s linear infinite;
+    gap: 2rem;
+}
+
+#reports .marquee-content>div {
+    transition: border-color 0.5s, box-shadow 0.5s;
+}
+
+.marquee-content-reverse {
+    display: inline-block;
+    animation: scroll-reverse 20s linear infinite;
+    will-change: transform;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-reverse {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* ========================================
+   ANIMATIONS — REVEAL (base + variants)
+   ======================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Slide in from left */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide in from right */
+.reveal-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Scale up */
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.85);
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Stagger delay utilities */
+.stagger-1 {
+    transition-delay: 0.1s;
+}
+
+.stagger-2 {
+    transition-delay: 0.2s;
+}
+
+.stagger-3 {
+    transition-delay: 0.3s;
+}
+
+.stagger-4 {
+    transition-delay: 0.4s;
+}
+
+.stagger-5 {
+    transition-delay: 0.5s;
+}
+
+/* ========================================
+   ANIMATIONS — PARALLAX
+   ======================================== */
+.parallax-element {
+    will-change: transform;
+    transition: transform 0.1s linear;
+}
+
+/* ========================================
+   ANIMATIONS — TYPEWRITER
+   ======================================== */
+.typewriter-cursor::after {
+    content: '█';
+    animation: blink-cursor 1s step-end infinite;
+    color: #FF2A2A;
+    margin-left: 4px;
+}
+
+@keyframes blink-cursor {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ========================================
+   ANIMATIONS — GLITCH (limited to 3 iterations)
+   ======================================== */
+.glitch-hover:hover {
+    animation: glitch-anim 0.3s cubic-bezier(.25, .46, .45, .94) both 3;
+    color: #FF2A2A;
+}
+
+@keyframes glitch-anim {
+    0% {
+        transform: translate(0)
+    }
+
+    20% {
+        transform: translate(-2px, 2px)
+    }
+
+    40% {
+        transform: translate(-2px, -2px)
+    }
+
+    60% {
+        transform: translate(2px, 2px)
+    }
+
+    80% {
+        transform: translate(2px, -2px)
+    }
+
+    100% {
+        transform: translate(0)
+    }
+}
+
+/* ========================================
+   PROJECT STATUS BADGES
+   ======================================== */
+.project-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border: 2px solid #000;
+    z-index: 10;
+}
+
+.project-badge-live {
+    background-color: #33FF57;
+    color: #000;
+    animation: badge-pulse 2s ease-in-out infinite;
+}
+
+.project-badge-dev {
+    background-color: #FBFF48;
+    color: #000;
+}
+
+@keyframes badge-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(51, 255, 87, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px rgba(51, 255, 87, 0);
+    }
+}
+
+/* Project card action buttons */
+.project-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.project-actions a {
+    width: 44px;
+    height: 44px;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-size: 1.25rem;
+}
+
+/* ========================================
+   CONTACT FORM FEEDBACK
+   ======================================== */
+.form-status {
+    padding: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 14px;
+    border: 3px solid #000;
+    margin-top: 12px;
+    display: none;
+}
+
+.form-status.show {
+    display: block;
+    animation: status-slide 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.form-status-success {
+    background-color: #33FF57;
+    color: #000;
+    box-shadow: 4px 4px 0 0 #000;
+}
+
+.form-status-error {
+    background-color: #FF2A2A;
+    color: #fff;
+    box-shadow: 4px 4px 0 0 #000;
+}
+
+@keyframes status-slide {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Input error state */
+.input-error {
+    border-color: #FF2A2A !important;
+    animation: shake 0.4s ease;
+    box-shadow: 4px 4px 0 0 #FF2A2A !important;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-6px);
+    }
+
+    40% {
+        transform: translateX(6px);
+    }
+
+    60% {
+        transform: translateX(-4px);
+    }
+
+    80% {
+        transform: translateX(4px);
+    }
+}
+
+/* Button loading spinner */
+.btn-loading {
+    position: relative;
+    pointer-events: none;
+    color: transparent !important;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin: -12px 0 0 -12px;
+    border: 3px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========================================
+   UTILITY CLASSES (extracted from inline styles)
+   ======================================== */
+
+/* RJ_CREATES text stroke effect */
+.text-stroke-brutal {
+    -webkit-text-stroke: 3px black;
+}
+
+/* Dark grid background pattern (for dark sections) */
+.grid-bg-dark {
+    background-image: linear-gradient(#333 1px, transparent 1px),
+        linear-gradient(90deg, #333 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .marquee-content,
+    .marquee-content-reverse {
+        animation: none;
+    }
+
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    .glitch-hover:hover {
+        animation: none;
+    }
+
+    .parallax-element {
+        transform: none !important;
+    }
+
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Focus styles for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #FBFF48;
+    outline-offset: 2px;
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+@media print {
+    body {
+        background: white !important;
+        cursor: auto !important;
+    }
+
+    #cursor,
+    #progressBar,
+    nav,
+    .marquee-container,
+    footer,
+    #mobileMenu {
+        display: none !important;
+    }
+
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    section {
+        page-break-inside: avoid;
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+    }
+}

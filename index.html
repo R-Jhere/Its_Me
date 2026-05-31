@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Rahul | Full Stack Developer . Let's build the future with raw aesthetics.">
+    <meta name="keywords" content="Rahul, Full Stack Developer, Portfolio, Web Development, UI/UX, Javascript, React">
+    <meta name="author" content="Rahul">
+    <link rel="canonical" href="https://yourportfolio.com">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourportfolio.com">
+    <meta property="og:title" content="Rahul | Full Stack Developer">
+    <meta property="og:description"
+        content="Professional Full Stack Developer specializing in high-performance RJ_CREATES web experiences.">
+    <meta property="og:image" content="Assets/images/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourportfolio.com">
+    <meta property="twitter:title" content="RAHUL | Full Stack Developer">
+    <meta property="twitter:description"
+        content="Professional Full Stack Developer specializing in high-performance RJ_CREATES web experiences.">
+    <meta property="twitter:image" content="Assets/images/og-image.png">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TLNG322R');</script>
+    <!-- End Google Tag Manager -->
+    <title>RAHUL | Full Stack Developer</title>
+
+    <meta name="theme-color" content="#121212">
+
+    <!-- JSON-LD Structured Data for Search Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rahul",
+      "url": "https://yourportfolio.com",
+      "jobTitle": "Full Stack Developer",
+      "image": "Assets/images/logo.png",
+      "knowsAbout": ["React", "Python", "Java", "Node.js", "Django", "Three.js", "UI/UX Design", "RJ_CREATES Design"],
+      "sameAs": [
+        "https://github.com/R-Jhere",
+        "https://leetcode.com/u/RJ_here/"
+      ],
+      "description": "Full Stack Developer. Let's build the future with raw aesthetics."
+    }
+    </script>
+
+    <link rel="stylesheet" href="dist/tailwind.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="Assets/images/title_icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles.css?v=5">
+
+    <!-- Fallback: make reveal elements visible when JS is disabled -->
+    <noscript>
+        <style>
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body class="text-neo-black font-display antialiased selection:bg-neo-black selection:text-neo-yellow">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLNG322R" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div id="cursor" class="w-6 h-6 bg-white rounded-full border-2 border-black hidden lg:block"></div>
+
+    <div class="fixed top-0 left-0 h-2 bg-neo-green z-[60] border-b-2 border-black" id="progressBar" style="width: 0%">
+    </div>
+
+    <nav class="fixed top-0 w-full z-50 px-4 py-4 pointer-events-none">
+        <div class="max-w-7xl mx-auto flex justify-between items-center pointer-events-auto">
+            <a href="#"
+                class="bg-neo-white border-2 border-black px-4 py-1 text-2xl font-black shadow-hard hover:bg-neo-yellow transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none cursor-hover">
+                RJ.exe
+            </a>
+
+            <!-- Desktop Nav -->
+            <div
+                class="hidden md:flex gap-4 bg-white dark:bg-neo-black border-2 border-black p-2 shadow-hard items-center">
+                <a href="#about"
+                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors cursor-hover">/ABOUT</a>
+                <a href="#skills"
+                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors cursor-hover">/SKILLS</a>
+                <a href="#experience"
+                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors cursor-hover">/LOGS</a>
+                <a href="#projects"
+                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors cursor-hover">/WORK</a>
+                <button id="darkModeToggle"
+                    class="w-9 h-9 border-2 border-black dark:border-white bg-neo-black dark:bg-neo-yellow text-white dark:text-black flex items-center justify-center cursor-hover shadow-hard-sm hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+                    aria-label="Toggle dark mode">
+                    <i class="ri-sun-line text-lg"></i>
+                    <i class="ri-moon-line text-lg" style="display:none"></i>
+                </button>
+                <a href="#contact"
+                    class="px-3 py-1 font-mono font-bold text-sm bg-neo-yellow border border-black hover:bg-neo-pink transition-colors cursor-hover">HIRE
+                    ME</a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menuToggle" onclick="document.getElementById('mobileMenu').classList.toggle('translate-x-full')"
+                class="md:hidden bg-neo-white border-2 border-black p-2 shadow-hard-sm cursor-hover z-[70]"
+                aria-label="Toggle navigation menu">
+                <i class="ri-menu-3-line text-2xl font-bold"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobileMenu" class="fixed inset-0 z-[65] translate-x-full transition-transform duration-300 md:hidden">
+        <div class="absolute inset-0 bg-black/50"
+            onclick="document.getElementById('mobileMenu').classList.add('translate-x-full')"></div>
+        <div
+            class="absolute right-0 top-0 h-full w-72 bg-neo-white dark:bg-neo-black border-l-4 border-black shadow-hard-xl flex flex-col">
+            <div class="flex justify-between items-center p-6 border-b-4 border-black">
+                <span class="font-mono font-bold text-sm text-neo-green bg-black px-2 py-1">/// NAV</span>
+                <button onclick="document.getElementById('mobileMenu').classList.add('translate-x-full')"
+                    class="bg-neo-red text-white w-10 h-10 border-2 border-black font-black text-xl shadow-hard-sm hover:shadow-none hover:translate-x-0.5 hover:translate-y-0.5 transition-all"
+                    aria-label="Close menu">
+                    ✕
+                </button>
+            </div>
+            <nav class="flex flex-col p-6 gap-2">
+                <a href="#about" onclick="document.getElementById('mobileMenu').classList.add('translate-x-full')"
+                    class="px-4 py-3 font-mono font-bold text-lg border-2 border-black bg-white hover:bg-black hover:text-white transition-colors shadow-hard-sm">/ABOUT</a>
+                <a href="#skills" onclick="document.getElementById('mobileMenu').classList.add('translate-x-full')"
+                    class="px-4 py-3 font-mono font-bold text-lg border-2 border-black bg-white hover:bg-black hover:text-white transition-colors shadow-hard-sm">/SKILLS</a>
+                <a href="#experience" onclick="document.getElementById('mobileMenu').classList.add('translate-x-full')"
+                    class="px-4 py-3 font-mono font-bold text-lg border-2 border-black bg-white hover:bg-black hover:text-white transition-colors shadow-hard-sm">/LOGS</a>
+                <a href="#projects" onclick="document.getElementById('mobileMenu').classList.add('translate-x-full')"
+                    class="px-4 py-3 font-mono font-bold text-lg border-2 border-black bg-white hover:bg-black hover:text-white transition-colors shadow-hard-sm">/WORK</a>
+                <a href="#contact" onclick="document.getElementById('mobileMenu').classList.add('translate-x-full')"
+                    class="px-4 py-3 font-mono font-bold text-lg border-2 border-black bg-neo-yellow hover:bg-neo-pink transition-colors shadow-hard-sm text-center">HIRE
+                    ME</a>
+            </nav>
+            <div class="mt-auto p-6 border-t-2 border-black">
+                <div class="flex gap-4 justify-center items-center">
+                    <button id="darkModeToggleMobile"
+                        class="w-10 h-10 border-2 border-black dark:border-white bg-neo-black dark:bg-neo-yellow text-white dark:text-black flex items-center justify-center cursor-hover shadow-hard-sm hover:shadow-none transition-all"
+                        aria-label="Toggle dark mode">
+                        <i class="ri-sun-line text-lg"></i>
+                        <i class="ri-moon-line text-lg" style="display:none"></i>
+                    </button>
+                    <a href="https://github.com/R-Jhere/" target="_blank" rel="noopener noreferrer"
+                        class="text-2xl hover:text-neo-green transition-colors" aria-label="GitHub profile"><i
+                            class="ri-github-fill"></i></a>
+                    <a href="https://www.linkedin.com/in/rjhere/" target="_blank" rel="noopener noreferrer"
+                        class="text-2xl hover:text-neo-blue transition-colors" aria-label="LinkedIn profile"><i
+                            class="ri-linkedin-fill"></i></a>
+                    <a href="https://www.instagram.com/rj_here._/" target="_blank" rel="noopener noreferrer"
+                        class="text-2xl hover:text-neo-pink transition-colors" aria-label="Instagram profile"><i
+                            class="ri-instagram-fill"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section
+            class="min-h-screen flex flex-col justify-center items-center px-4 pt-20 relative overflow-hidden border-b-4 border-black">
+            <div class="parallax-element absolute top-1/3 left-[10%] w-16 h-16 bg-neo-blue border-4 border-black shadow-hard animate-bounce hidden lg:block rotate-12"
+                data-speed="0.2">
+            </div>
+            <div class="parallax-element absolute bottom-1/3 right-[10%] w-24 h-24 bg-neo-pink rounded-full border-4 border-black shadow-hard hidden lg:block animate-pulse"
+                data-speed="0.4">
+            </div>
+            <div class="absolute top-20 right-20 text-9xl opacity-5 font-black select-none pointer-events-none">CODE
+            </div>
+
+            <div class="relative z-10 text-center max-w-5xl">
+                <div
+                    class="inline-block bg-neo-white border-2 border-black px-4 py-1 mb-6 shadow-hard rotate-[-2deg] reveal">
+                    <span class="font-mono font-bold text-neo-green bg-black px-2 mr-2">●</span>
+                    <span class="font-mono font-bold">SYSTEM STATUS: ONLINE</span>
+                </div>
+
+                <h1
+                    class="text-[13vw] md:text-[10vw] leading-[0.8] font-black uppercase tracking-tighter mb-6 reveal mix-blend-darken">
+                    FULL STACK<br>
+                    <span class="text-white text-stroke-brutal">DEVELOPER</span>
+                </h1>
+
+                <p
+                    class="font-mono text-lg md:text-2xl max-w-2xl mx-auto mb-10 bg-neo-yellow border-2 border-black p-4 shadow-hard reveal rotate-1">
+                    I build digital products that refuse to be boring. <br>
+                    <b>React • Python • Java • Node</b>
+                </p>
+
+                <div class="flex flex-col md:flex-row justify-center gap-6 reveal">
+                    <a href="#projects"
+                        class="bg-black text-white border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-green hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
+                        VIEW DATABASE
+                    </a>
+                    <a href="Assets/Resume/Rahul%20Resume.pdf" download
+                        class="bg-neo-white text-black border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover flex items-center justify-center gap-2">
+                        <i class="ri-download-line"></i> DOWNLOAD CV
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="border-b-4 border-black bg-neo-blue py-3 relative z-20">
+            <div class="marquee-container font-mono font-bold text-2xl text-white">
+                <div class="marquee-content">
+                    /// OPEN FOR WORK /// FULL STACK DEVELOPMENT /// UI/UX DESIGN /// WEB3 READY /// ACCESSIBLE /// FAST
+                    ///
+                    SECURE /// OPEN FOR WORK /// FULL STACK DEVELOPMENT ///
+                </div>
+            </div>
+        </div>
+
+        <section id="about"
+            class="py-24 px-4 max-w-7xl mx-auto border-x-4 border-black bg-white dark:bg-neo-black dark:text-white my-12 shadow-hard-lg">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                <div class="md:col-span-4 reveal">
+                    <div
+                        class="aspect-square bg-gray-200 border-4 border-black relative shadow-hard overflow-hidden group">
+                        <img src="Assets/images/img.jpg" alt="Rahul" loading="lazy"
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                        <span
+                            class="absolute top-2 left-2 bg-neo-red text-white px-2 font-mono text-xs border border-black z-10">AVATAR.JPG</span>
+                    </div>
+                </div>
+                <div class="md:col-span-8 flex flex-col justify-center reveal">
+                    <h2 class="text-6xl font-black uppercase mb-6">Who am I?</h2>
+                    <p class="font-mono text-xl leading-relaxed mb-6">
+                        I am Rahul. A creative developer who believes the web has become too sanitized. I bring <span
+                            class="bg-neo-yellow px-1 border border-black">personality</span> back to code.
+                    </p>
+                    <p class="font-mono text-lg mb-8 text-gray-600 border-l-4 border-neo-purple pl-4">
+                        > Specialized in Designing and Web Development.<br>
+                        > Obsessed with Perfection and AI.<br>
+                        > 3+ years of shipping code that works.
+                    </p>
+
+                    <div class="flex gap-4">
+                        <div class="bg-neo-black text-white px-4 py-2 font-mono text-sm border-2 border-transparent">
+                            📍 LOCATION: WORLDWIDE
+                        </div>
+                        <div class="bg-neo-green text-black px-4 py-2 font-mono text-sm border-2 border-black">
+                            🟢 STATUS: AVAILABLE
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-20 bg-neo-black text-neo-white border-y-4 border-black relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20 grid-bg-dark">
+            </div>
+
+            <div class="max-w-[1400px] mx-auto px-4 relative z-10">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b-4 border-white pb-4">
+                    <h2 class="text-6xl md:text-8xl font-black uppercase text-white tracking-tighter">
+                        TECH<span class="text-neo-green">_STACK</span>
+                    </h2>
+                    <div class="flex items-center gap-2 mb-2 md:mb-4">
+                        <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                        <p class="font-mono text-neo-green text-sm font-bold">/// SYSTEM_OPTIMIZED</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center md:justify-start">
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ LIBRARY
+                        </div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">REACT
+                        </div>
+                    </div>
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_
+                            FRAMEWORK
+                        </div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">NEXT.JS
+                        </div>
+                    </div>
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ LANGUAGE
+                        </div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">Python
+                        </div>
+                    </div>
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ BACKEND
+                        </div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">NODE.JS
+                        </div>
+                    </div>
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-pink transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ STYLING
+                        </div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">
+                            TAILWIND
+                        </div>
+                    </div>
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ DATA
+                        </div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">MySQL
+                        </div>
+                    </div>
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ CORE
+                        </div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">HTML5
+                        </div>
+                    </div>
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ VERSION
+                        </div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">GIT
+                        </div>
+                    </div>
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ QUERY
+                        </div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">GRAPHQL
+                        </div>
+                    </div>
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-blue transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ OPS
+                        </div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">GitHub
+                        </div>
+                    </div>
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-orange transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ LANGUAGE
+                        </div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">JAVA
+                        </div>
+                    </div>
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-yellow transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_
+                            FRAMEWORK
+                        </div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">Django
+                        </div>
+                    </div>
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-pink transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ LANGUAGE
+                        </div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">PHP
+                        </div>
+                    </div>
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-white transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_
+                            FRAMEWORK
+                        </div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">LARAVEL
+                        </div>
+                    </div>
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-green transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ 3D</div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">
+                            THREE.JS
+                        </div>
+                    </div>
+
+                    <div
+                        class="group w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/6 xl:w-[12.5%] h-24 border-r-2 border-b-2 border-white/20 bg-neo-black hover:bg-neo-purple transition-all duration-0 hover:z-10 relative cursor-hover flex flex-col items-center justify-center p-2">
+                        <div class="text-neo-green group-hover:text-black font-mono text-xs mb-1 opacity-50">>_ LANGUAGE
+                        </div>
+                        <div class="text-white group-hover:text-black font-black font-display text-xl uppercase">C++
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t-4 border-white mt-8 pt-4 flex justify-between font-mono text-xs text-gray-500">
+                    <span>TOTAL_NODES: 15</span>
+                    <span>MEMORY_USAGE: 128MB</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-24 px-4 max-w-7xl mx-auto dark:text-white">
+            <h2 class="text-5xl md:text-8xl font-black uppercase mb-12 tracking-tighter text-center typewriter-cursor">
+                Experience<span class="text-neo-red">_Log</span>
+            </h2>
+
+            <div class="relative border-l-4 border-black ml-4 md:ml-10 space-y-12">
+
+
+
+                <div class="reveal-left relative pl-8 md:pl-16">
+                    <div class="absolute -left-[14px] top-2 w-6 h-6 bg-neo-green border-4 border-black"></div>
+                    <div class="bg-white border-4 border-black p-6 shadow-hard hover:shadow-hard-xl transition-all">
+                        <div
+                            class="flex flex-col md:flex-row justify-between items-start md:items-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
+                            <h3 class="text-3xl font-black uppercase">Looking For an Internship</h3>
+                            <span class="font-mono font-bold bg-neo-black text-white px-2 py-1">?? - ?? </span>
+                        </div>
+                        <p class="font-mono text-xl mb-2 text-neo-green font-bold">@ HIRE_ME :)</p>
+                        <ul class="list-disc list-inside font-mono text-gray-700 space-y-1">
+                            <li>Breaking things responsibly (and fixing them faster)</li>
+                            <li>Learning fast, failing faster, improving fastest</li>
+                            <li>Shipping features before overthinking them</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+        <!-- CODING STATS SECTION -->
+        <section id="coding-stats"
+            class="py-12 bg-neo-black text-white border-y-4 border-black relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20 grid-bg-dark">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 relative z-10">
+                <!-- Compact Header -->
+                <div class="flex justify-between items-center mb-6 border-b-2 border-white pb-3">
+                    <h2 class="text-4xl md:text-5xl font-black uppercase text-white tracking-tight">
+                        CODING<span class="text-neo-green">_STATS</span>
+                    </h2>
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                        <p class="font-mono text-neo-green text-xs font-bold">LIVE</p>
+                    </div>
+                </div>
+
+                <!-- Two Column Layout: GitHub | LeetCode -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:auto-rows-fr">
+                    <!-- GitHub Column -->
+                    <div class="reveal flex flex-col h-full">
+                        <div class="flex items-center gap-2 mb-4 border-b border-white/20 pb-2">
+                            <div class="w-8 h-8 bg-neo-green border-2 border-white flex items-center justify-center">
+                                <i class="ri-github-fill text-lg text-black"></i>
+                            </div>
+                            <h3 class="text-2xl font-black uppercase text-white">GITHUB</h3>
+                        </div>
+
+                        <!-- GitHub Block -->
+                        <div
+                            class="border-4 border-white/20 p-6 bg-black flex-1 flex flex-col shadow-[8px_8px_0_rgba(0,0,0,1)] relative group">
+                            <!-- Profile Header -->
+                            <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
+                                <div class="flex items-center gap-3">
+                                    <i class="ri-github-fill text-3xl text-neo-green"></i>
+                                    <div>
+                                        <h4 class="text-xl font-black text-white leading-tight">R-Jhere</h4>
+                                        <p class="text-[10px] font-mono text-neo-green uppercase tracking-widest">
+                                            Midnight
+                                            Coder</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div id="total-contributions"
+                                        class="text-2xl font-black text-neo-green tracking-tighter">--</div>
+                                    <p class="text-[8px] font-mono text-gray-500 uppercase">Commits</p>
+                                </div>
+                            </div>
+
+                            <!-- Simplified Stats Grid (2x2) -->
+                            <div class="grid grid-cols-2 gap-4 mb-8 uppercase">
+                                <div
+                                    class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]">
+                                    <div
+                                        class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
+                                        Repositories</div>
+                                    <div id="repos-count" class="text-white font-black text-3xl tracking-tighter">--
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]">
+                                    <div
+                                        class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
+                                        Followers</div>
+                                    <div id="followers-count" class="text-white font-black text-3xl tracking-tighter">--
+                                    </div>
+                                </div>
+                                <div
+                                    class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]">
+                                    <div
+                                        class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
+                                        Commits</div>
+                                    <div id="total-contributions-grid"
+                                        class="text-white font-black text-3xl tracking-tighter">--</div>
+                                </div>
+                                <div
+                                    class="border-2 border-neo-green/30 bg-neo-black/60 p-4 relative group overflow-hidden hover:border-neo-green transition-colors shadow-[4px_4px_0_rgba(51,255,87,0.1)]">
+                                    <div
+                                        class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">
+                                        Joined</div>
+                                    <div id="created-at"
+                                        class="text-white font-black text-xl tracking-tighter mt-1 leading-none">--
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Activity Graph parallel to LeetCode Heatmap -->
+                            <div class="flex-1 flex flex-col justify-center mb-8">
+                                <div
+                                    class="bg-black border-2 border-neo-green/30 p-2 overflow-hidden shadow-[4px_4px_0_rgba(51,255,87,0.1)] group hover:border-neo-green transition-colors duration-500 relative">
+                                    <!-- RJ_CREATES accent dot -->
+                                    <div
+                                        class="absolute top-1 right-1 w-1.5 h-1.5 bg-neo-green rounded-full animate-pulse">
+                                    </div>
+                                    <p class="text-[8px] font-mono text-neo-green/50 uppercase tracking-[0.2em] mb-1">
+                                        Matrix_Output</p>
+                                    <img src="https://ghchart.rshah.org/33FF57/R-Jhere" alt="GitHub Contribution Graph"
+                                        class="w-full h-auto filter brightness-110" style="image-rendering: auto;" />
+                                </div>
+                            </div>
+
+                            <!-- Command Line Footer -->
+                            <div
+                                class="mt-auto flex items-center justify-between text-neo-green p-3 border-2 border-white/10 bg-neo-black font-mono text-[11px]">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-white/30">$</span>
+                                    <span class="text-neo-green">gh --stats</span>
+                                    <span class="animate-pulse">_</span>
+                                </div>
+                                <a href="https://github.com/R-Jhere" target="_blank" rel="noopener noreferrer"
+                                    class="text-neo-green px-3 py-1 font-black uppercase border border-neo-green hover:bg-neo-green hover:text-black transition-all">
+                                    VIEW_GH →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LeetCode Column -->
+                    <div class="reveal flex flex-col h-full">
+                        <div class="flex items-center gap-2 mb-4 border-b border-white/20 pb-2">
+                            <div class="w-8 h-8 bg-neo-orange border-2 border-white flex items-center justify-center">
+                                <i class="ri-code-box-fill text-lg text-black"></i>
+                            </div>
+                            <h3 class="text-2xl font-black uppercase text-white">LEETCODE</h3>
+                        </div>
+
+                        <!-- LeetCode Block -->
+                        <div
+                            class="border-4 border-white/20 p-6 bg-black flex-1 flex flex-col shadow-[8px_8px_0_rgba(0,0,0,1)] relative group">
+                            <!-- Profile Header -->
+                            <div class="flex items-center justify-between mb-8 pb-4 border-b border-white/10">
+                                <div class="flex items-center gap-3">
+                                    <i class="ri-code-box-fill text-3xl text-neo-orange"></i>
+                                    <div>
+                                        <h4 class="text-xl font-black text-white leading-tight">RJ_here</h4>
+                                        <p class="text-[10px] font-mono text-neo-orange uppercase tracking-widest">
+                                            Problem
+                                            solver</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-2xl font-black text-neo-orange tracking-tighter">#Top</div>
+                                    <p class="text-[8px] font-mono text-gray-500 uppercase">Ranking</p>
+                                </div>
+                            </div>
+
+                            <!-- Activity Box parallel to GitHub Matrix -->
+                            <div class="flex-1 flex flex-col justify-center mb-8">
+                                <div
+                                    class="border-2 border-neo-orange/30 p-2 overflow-hidden bg-black shadow-[4px_4px_0_rgba(255,107,0,0.1)] group hover:border-neo-orange transition-colors duration-500 relative">
+                                    <!-- RJ_CREATES accent dot -->
+                                    <div
+                                        class="absolute top-1 right-1 w-1.5 h-1.5 bg-neo-orange rounded-full animate-pulse">
+                                    </div>
+                                    <img src="https://leetcard.jacoblin.cool/RJ_here?theme=dark&font=Ubuntu&ext=heatmap"
+                                        alt="LeetCode Stats" class="w-full h-auto object-contain filter contrast-125" />
+                                </div>
+                            </div>
+
+                            <!-- Command Line Footer -->
+                            <div
+                                class="mt-auto flex items-center justify-between text-neo-orange p-3 border-2 border-white/10 bg-neo-black font-mono text-[11px]">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-white/30">$</span>
+                                    <span class="text-neo-orange">leetcode --u</span>
+                                    <span class="animate-pulse">_</span>
+                                </div>
+                                <a href="https://leetcode.com/u/RJ_here/" target="_blank" rel="noopener noreferrer"
+                                    class="text-neo-orange px-3 py-1 font-black uppercase border border-neo-orange hover:bg-neo-orange hover:text-black transition-all">
+                                    VIEW_LC →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-24 bg-neo-yellow border-t-4 border-black px-4 overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <h2
+                    class="text-6xl md:text-9xl font-black mb-16 uppercase tracking-tighter text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)] text-stroke-brutal">
+                    Selected Works
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <article class="reveal-scale stagger-1 group bg-white border-4 border-black p-4 shadow-hard">
+                        <div
+                            class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all">
+                            <span class="project-badge project-badge-live">● LIVE</span>
+                            <img src="Assets/images/stoceasy.png" loading="lazy"
+                                alt="StockEasy - Full Stack Stock Market Platform with Chatbot and Admin Panel by Rahul"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3
+                                    class="text-4xl font-black uppercase mb-2 group-hover:text-neo-purple transition-colors glitch-hover">
+                                    StockEasy</h3>
+                                <p class="font-mono text-sm mb-4 max-w-xs">An Online Stock Market Platform with
+                                    Stock
+                                    analysis, Chatbot and admin panel for user support.</p>
+                                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                                    <span class="bg-neo-black text-white px-2 py-1">Django</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">Python</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">Streamlit</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">Redis - Websockets</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">MySQL</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">Yfinance API</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/R-Jhere/" aria-label="StockEasy GitHub repo"
+                                    class="bg-neo-black text-white hover:bg-neo-green hover:text-black cursor-hover shadow-hard-sm">
+                                    <i class="ri-github-fill"></i>
+                                </a>
+                                <a href="#" aria-label="View StockEasy live demo"
+                                    class="bg-neo-green hover:bg-black hover:text-white cursor-hover shadow-hard-sm">
+                                    <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article
+                        class="reveal-scale stagger-2 group bg-white border-4 border-black p-4 shadow-hard mt-0 md:mt-20">
+                        <div
+                            class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all">
+                            <span class="project-badge project-badge-live">● LIVE</span>
+                            <img src="Assets/images/owl.png" loading="lazy"
+                                alt="Owl-Bookmark - A smart bookmark manager with an interactive owl mascot whose eyes follow your cursor."
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3
+                                    class="text-4xl font-black uppercase mb-2 group-hover:text-neo-blue transition-colors glitch-hover">
+                                    Owl-Bookmark</h3>
+                                <p class="font-mono text-sm mb-4 max-w-xs">A smart bookmark manager with an
+                                    interactive
+                                    owl
+                                    mascot whose eyes follow your cursor.
+                                    Organize, search, sync, and manage bookmarks effortlessly with folders, bulk
+                                    actions,
+                                    and quick right-click saving.</p>
+                                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                                    <span class="bg-neo-black text-white px-2 py-1">HTML</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">CSS</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">Vanilla JS</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/R-Jhere/" aria-label="Owl-Bookmark GitHub repo"
+                                    class="bg-neo-black text-white hover:bg-neo-blue hover:text-black cursor-hover shadow-hard-sm">
+                                    <i class="ri-github-fill"></i>
+                                </a>
+                                <a href="#" aria-label="View Owl-Bookmark live demo"
+                                    class="bg-neo-green hover:bg-black hover:text-white cursor-hover shadow-hard-sm">
+                                    <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="reveal-scale stagger-3 group bg-white border-4 border-black p-4 shadow-hard">
+                        <div
+                            class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all">
+                            <span class="project-badge project-badge-live">● LIVE</span>
+                            <img src="Assets/images/paw.png" alt="Pawtect - Dog Rescue & Adoption Platform."
+                                loading="lazy"
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3
+                                    class="text-4xl font-black uppercase mb-2 group-hover:text-neo-pink transition-colors glitch-hover">
+                                    Pawtect</h3>
+                                <p class="font-mono text-sm mb-4 max-w-xs">Pawtect - Dog Rescue & Adoption Platform.
+                                    A comprehensive platform connecting animal rescue organizations with potential
+                                    adopters,
+                                    featuring real-time incident reporting, adoption management, and medical record
+                                    tracking.
+                                </p>
+                                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                                    <span class="bg-neo-black text-white px-2 py-1">Django</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">Python</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">MySQL</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">AI</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/R-Jhere/" aria-label="Pawtect GitHub repo"
+                                    class="bg-neo-black text-white hover:bg-neo-pink hover:text-black cursor-hover shadow-hard-sm">
+                                    <i class="ri-github-fill"></i>
+                                </a>
+                                <a href="#" aria-label="View Pawtect live demo"
+                                    class="bg-neo-green hover:bg-black hover:text-white cursor-hover shadow-hard-sm">
+                                    <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article
+                        class="reveal-scale stagger-4 group bg-white border-4 border-black p-4 shadow-hard mt-0 md:mt-20">
+                        <div
+                            class="bg-black border-2 border-black aspect-video relative overflow-hidden mb-6 group-hover:shadow-none transition-all">
+                            <span class="project-badge project-badge-dev">◆ IN_DEV</span>
+                            <img src="Assets/images/luma.png" loading="lazy"
+                                alt="Next-generation JavaScript framework combining React-like reactivity, animations, and 3D capabilities in one lightweight library."
+                                class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500">
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3
+                                    class="text-4xl font-black uppercase mb-2 group-hover:text-neo-orange transition-colors glitch-hover">
+                                    Luma.js</h3>
+                                <p class="font-mono text-sm mb-4 max-w-xs">Next-generation JavaScript framework
+                                    combining
+                                    React-like reactivity, animations, and 3D capabilities in one lightweight
+                                    library.
+                                </p>
+                                <div class="flex gap-2 font-mono text-xs font-bold flex-wrap">
+                                    <span class="bg-neo-black text-white px-2 py-1">JavaScript (ES6+)</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">TypeScript</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">WebGL</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">HTML5</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">CSS3</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">Browser APIs</span>
+                                    <span class="bg-neo-black text-white px-2 py-1">NPM</span>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <a href="https://github.com/R-Jhere/" aria-label="Luma.js GitHub repo"
+                                    class="bg-neo-black text-white hover:bg-neo-orange hover:text-black cursor-hover shadow-hard-sm">
+                                    <i class="ri-github-fill"></i>
+                                </a>
+                                <a href="#" aria-label="View Luma.js live demo"
+                                    class="bg-neo-green hover:bg-black hover:text-white cursor-hover shadow-hard-sm">
+                                    <i class="ri-arrow-right-up-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="text-center mt-24">
+                    <a href="https://github.com/R-Jhere"
+                        class="inline-block bg-neo-black text-white px-12 py-5 font-bold font-mono text-xl hover:bg-neo-white hover:text-black border-4 border-black transition-all shadow-hard hover:shadow-none cursor-hover">
+                        VIEW ALL REPOS ON GITHUB
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="reports" class="py-24 bg-neo-black border-t-4 border-black overflow-hidden relative">
+            <div class="max-w-7xl mx-auto px-4">
+                <div
+                    class="flex items-center gap-2 mb-16 bg-white/5 border-2 border-white/10 p-4 inline-flex shadow-hard shadow-neo-blue/20">
+                    <div class="flex gap-2">
+                        <div class="h-3 w-3 bg-red-500 rounded-full border border-black"></div>
+                        <div class="h-3 w-3 bg-yellow-500 rounded-full border border-black"></div>
+                        <div class="h-3 w-3 bg-green-500 rounded-full border border-black"></div>
+                    </div>
+                    <h2 class="font-mono text-white text-xl font-bold ml-4 tracking-tighter">MILESTONES.sys</h2>
+                    <div class="ml-8 px-2 bg-neo-blue text-black text-[10px] font-black uppercase">loading more....
+                    </div>
+                </div>
+            </div>
+
+            <div class="marquee-container group cursor-hover">
+                <div class="marquee-content py-12 px-4 select-none">
+                    <!-- Original Set -->
+
+                    <div
+                        class="flex-shrink-0 w-[350px] bg-neo-black border-4 border-white/10 shadow-hard hover:border-neo-green/50 transition-colors duration-500 relative group/card overflow-hidden text-left whitespace-normal flex flex-col">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-neo-green z-10"></div>
+                        <div class="relative overflow-hidden flex justify-center items-center bg-black">
+
+                            <img src="Assets/images/milestone-1.png" alt="Hackathon Win" loading="lazy"
+                                class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute top-3 left-3 font-mono text-neo-green text-xs font-bold tracking-widest uppercase bg-black/70 px-2 py-1">
+                                MILESTONE_001</div>
+                        </div>
+                        <div class="p-5 mt-auto">
+                            <p class="font-mono text-sm leading-relaxed text-gray-400 mb-2">"1st runner-up @NIRVANA
+                                HACKATHON at GEHU Haldwani."</p>
+                            <div class="flex items-center justify-between mt-2">
+                                <div class="font-mono text-[10px] text-gray-600 uppercase tracking-tight">—@ Graphic Era
+                                    Hill University , Haldwani.</div>
+                                <a href="https://www.linkedin.com/posts/megha-kanyal-24a79b287_hackathon-techgeeks-teamwork-ugcPost-7391830452010913792-P0dC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFGNc4sBgkgzG_No-ZwOnZbAvqjbs746Zv0"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-1 font-mono text-[10px] text-neo-green hover:text-white border border-neo-green/30 hover:border-neo-green hover:bg-neo-green/10 px-2 py-1 transition-all duration-300 uppercase tracking-wider">
+                                    <i class="ri-linkedin-fill text-sm"></i> Proof
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex-shrink-0 w-[350px] bg-neo-black border-4 border-white/10 shadow-hard hover:border-neo-blue/50 transition-colors duration-500 relative group/card overflow-hidden text-left whitespace-normal flex flex-col">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-neo-blue z-10"></div>
+                        <div class="relative overflow-hidden flex justify-center items-center bg-black">
+
+                            <img src="Assets/images/milestone-2.jpg" alt="Hackathon Achievement" loading="lazy"
+                                class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute top-3 left-3 font-mono text-neo-blue text-xs font-bold tracking-widest uppercase bg-black/70 px-2 py-1">
+                                MILESTONE_002</div>
+                        </div>
+                        <div class="p-5 mt-auto">
+                            <p class="font-mono text-sm leading-relaxed text-gray-400 mb-2">"Best IOT Project @BUILD FOR
+                                INDIA at GEHU Bhimtal."</p>
+                            <div class="flex items-center justify-between mt-2">
+                                <div class="font-mono text-[10px] text-gray-600 uppercase tracking-tight">—@Graphic Era
+                                    Hill University , Bhimtal.</div>
+                                <a href="https://www.linkedin.com/posts/rjhere_techabrtonic-aapdaconnect-aapdaconnect-activity-7369210115708637185-UknL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFGNc4sBgkgzG_No-ZwOnZbAvqjbs746Zv0"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-1 font-mono text-[10px] text-neo-blue hover:text-white border border-neo-blue/30 hover:border-neo-blue hover:bg-neo-blue/10 px-2 py-1 transition-all duration-300 uppercase tracking-wider">
+                                    <i class="ri-linkedin-fill text-sm"></i> Proof
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex-shrink-0 w-[350px] bg-neo-black border-4 border-white/10 shadow-hard hover:border-neo-pink/50 transition-colors duration-500 relative group/card overflow-hidden text-left whitespace-normal flex flex-col">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-neo-pink z-10"></div>
+                        <div class="relative overflow-hidden flex justify-center items-center bg-black">
+
+                            <img src="Assets/images/milestone-3.jpg" alt="Winning Moment" loading="lazy"
+                                class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute top-3 left-3 font-mono text-neo-pink text-xs font-bold tracking-widest uppercase bg-black/70 px-2 py-1">
+                                MILESTONE_003</div>
+                        </div>
+                        <div class="p-5 mt-auto">
+                            <p class="font-mono text-sm leading-relaxed text-gray-400 mb-2">"2nd Runner-Up
+                                @HackAura_2025 organised by Geeks Hive competing among 200 incredible teams from across
+                                the country! "</p>
+                            <div class="flex items-center justify-between mt-2">
+                                <div class="font-mono text-[10px] text-gray-600 uppercase tracking-tight">—@National
+                                    Hackathon</div>
+                                <a href="https://www.linkedin.com/posts/rjhere_hackaura2025-pawtect-techtonic-activity-7368777786938884096-PTan?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFGNc4sBgkgzG_No-ZwOnZbAvqjbs746Zv0"
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-1 font-mono text-[10px] text-neo-pink hover:text-white border border-neo-pink/30 hover:border-neo-pink hover:bg-neo-pink/10 px-2 py-1 transition-all duration-300 uppercase tracking-wider">
+                                    <i class="ri-linkedin-fill text-sm"></i> Proof
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex-shrink-0 w-[350px] bg-neo-black border-4 border-white/10 shadow-hard hover:border-neo-purple/50 transition-colors duration-500 relative group/card overflow-hidden text-left whitespace-normal flex flex-col">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-neo-purple z-10"></div>
+                        <div class="relative overflow-hidden flex justify-center items-center bg-black">
+
+                            <img src="Assets/images/milestone-4.jpg" alt="Team Achievement" loading="lazy"
+                                class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute top-3 left-3 font-mono text-neo-purple text-xs font-bold tracking-widest uppercase bg-black/70 px-2 py-1">
+                                NEXT_MILESTONE_LOADING.....</div>
+                        </div>
+                        <div class="p-5 mt-auto">
+                            <p class="font-mono text-sm leading-relaxed text-gray-400 mb-2">"soon"</p>
+                            <div class="flex items-center justify-between mt-2">
+                                <div class="font-mono text-[10px] text-gray-600 uppercase tracking-tight">@___??
+                                </div>
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-1 font-mono text-[10px] text-neo-purple hover:text-white border border-neo-purple/30 hover:border-neo-purple hover:bg-neo-purple/10 px-2 py-1 transition-all duration-300 uppercase tracking-wider">
+                                    <i class="ri-linkedin-fill text-sm"></i> Proof
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Duplicate Set for Loop -->
+
+                    <div
+                        class="flex-shrink-0 w-[350px] bg-neo-black border-4 border-white/10 shadow-hard hover:border-neo-green/50 transition-colors duration-500 relative group/card overflow-hidden text-left whitespace-normal flex flex-col">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-neo-green z-10"></div>
+                        <div class="relative overflow-hidden flex justify-center items-center bg-black">
+
+                            <img src="Assets/images/milestone-1.png" alt="Hackathon Win" loading="lazy"
+                                class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute top-3 left-3 font-mono text-neo-green text-xs font-bold tracking-widest uppercase bg-black/70 px-2 py-1">
+                                MILESTONE_001</div>
+                        </div>
+                        <div class="p-5 mt-auto">
+                            <p class="font-mono text-sm leading-relaxed text-gray-400 mb-2">"1st runner-up @NIRVANA
+                                HACKATHON at GEHU Haldwani."</p>
+                            <div class="flex items-center justify-between mt-2">
+                                <div class="font-mono text-[10px] text-gray-600 uppercase tracking-tight">— Graphic Era
+                                    Hill University , Haldwani.</div>
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-1 font-mono text-[10px] text-neo-green hover:text-white border border-neo-green/30 hover:border-neo-green hover:bg-neo-green/10 px-2 py-1 transition-all duration-300 uppercase tracking-wider">
+                                    <i class="ri-linkedin-fill text-sm"></i> Proof
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex-shrink-0 w-[350px] bg-neo-black border-4 border-white/10 shadow-hard hover:border-neo-blue/50 transition-colors duration-500 relative group/card overflow-hidden text-left whitespace-normal flex flex-col">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-neo-blue z-10"></div>
+                        <div class="relative overflow-hidden flex justify-center items-center bg-black">
+
+                            <img src="Assets/images/milestone-2.jpg" alt="Hackathon Achievement" loading="lazy"
+                                class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute top-3 left-3 font-mono text-neo-blue text-xs font-bold tracking-widest uppercase bg-black/70 px-2 py-1">
+                                MILESTONE_002</div>
+                        </div>
+                        <div class="p-5 mt-auto">
+                            <p class="font-mono text-sm leading-relaxed text-gray-400 mb-2">"Best IOT Project @BUILD FOR
+                                INDIA at GEHU Bhimtal."</p>
+                            <div class="flex items-center justify-between mt-2">
+                                <div class="font-mono text-[10px] text-gray-600 uppercase tracking-tight">—@Graphic Era
+                                    Hill University , Bhimtal.</div>
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-1 font-mono text-[10px] text-neo-blue hover:text-white border border-neo-blue/30 hover:border-neo-blue hover:bg-neo-blue/10 px-2 py-1 transition-all duration-300 uppercase tracking-wider">
+                                    <i class="ri-linkedin-fill text-sm"></i> Proof
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex-shrink-0 w-[350px] bg-neo-black border-4 border-white/10 shadow-hard hover:border-neo-pink/50 transition-colors duration-500 relative group/card overflow-hidden text-left whitespace-normal flex flex-col">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-neo-pink z-10"></div>
+                        <div class="relative overflow-hidden flex justify-center items-center bg-black">
+
+                            <img src="Assets/images/milestone-3.jpg" alt="Winning Moment" loading="lazy"
+                                class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute top-3 left-3 font-mono text-neo-pink text-xs font-bold tracking-widest uppercase bg-black/70 px-2 py-1">
+                                MILESTONE_003</div>
+                        </div>
+                        <div class="p-5 mt-auto">
+                            <p class="font-mono text-sm leading-relaxed text-gray-400 mb-2">"Runner-Up
+                                @HackAura_2025 organised by Geeks Hive competing among 200 incredible teams from across
+                                the country!"</p>
+                            <div class="flex items-center justify-between mt-2">
+                                <div class="font-mono text-[10px] text-gray-600 uppercase tracking-tight">—@National
+                                    Hackathon </div>
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-1 font-mono text-[10px] text-neo-pink hover:text-white border border-neo-pink/30 hover:border-neo-pink hover:bg-neo-pink/10 px-2 py-1 transition-all duration-300 uppercase tracking-wider">
+                                    <i class="ri-linkedin-fill text-sm"></i> Proof
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="flex-shrink-0 w-[350px] bg-neo-black border-4 border-white/10 shadow-hard hover:border-neo-purple/50 transition-colors duration-500 relative group/card overflow-hidden text-left whitespace-normal flex flex-col">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-neo-purple z-10"></div>
+                        <div class="relative overflow-hidden flex justify-center items-center bg-black">
+
+                            <img src="Assets/images/milestone-4.jpg" alt="Team Achievement" loading="lazy"
+                                class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+                            <div
+                                class="absolute top-3 left-3 font-mono text-neo-purple text-xs font-bold tracking-widest uppercase bg-black/70 px-2 py-1">
+                                 NEXT_MILESTONE_LOADING....</div>
+                        </div>
+                        <div class="p-5 mt-auto">
+                            <p class="font-mono text-sm leading-relaxed text-gray-400 mb-2">"soon"</p>
+                            <div class="flex items-center justify-between mt-2">
+                                <div class="font-mono text-[10px] text-gray-600 uppercase tracking-tight">—@___??
+                                </div>
+                                <a href="#" target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-1 font-mono text-[10px] text-neo-purple hover:text-white border border-neo-purple/30 hover:border-neo-purple hover:bg-neo-purple/10 px-2 py-1 transition-all duration-300 uppercase tracking-wider">
+                                    <i class="ri-linkedin-fill text-sm"></i> Proof
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 px-4 max-w-5xl mx-auto">
+            <div
+                class="bg-white dark:bg-neo-black dark:text-white border-4 border-black shadow-hard-xl p-8 md:p-12 relative reveal mt-12">
+                <div
+                    class="absolute -top-10 -left-6 bg-neo-yellow border-4 border-black px-6 py-2 shadow-hard rotate-[-5deg]">
+                    <span class="font-black text-2xl">START A PROJECT</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h2 class="text-6xl font-black uppercase mb-6 leading-[0.85]">Let's<br>Talk<br>Code.</h2>
+                        <p class="font-mono text-lg mb-8 text-gray-600">
+                            I am currently available for freelance work and open to full-time opportunities.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-black">
+                                    <i class="ri-mail-line text-xl"></i>
+                                </div>
+                                <a href="mailto:rahuljoshi.uk02@gmail.com"
+                                    class="text-xl font-bold hover:bg-neo-blue cursor-hover">rahuljoshi.uk02@gmail.com</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-12 h-12 bg-neo-black text-white flex items-center justify-center border-2 border-black">
+                                    <i class="ri-map-pin-line text-xl"></i>
+                                </div>
+                                <span class="text-xl font-bold">Remote / Earth</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="contactForm" class="space-y-6 bg-gray-50 dark:bg-black/50 p-6 border-2 border-black">
+                        <div class="flex flex-col">
+                            <label for="contact-name"
+                                class="font-mono font-bold mb-1 uppercase text-xs">Identity</label>
+                            <input type="text" id="contact-name" name="name" placeholder="NAME / COMPANY" required
+                                class="bg-white dark:bg-neo-black border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:text-black focus:shadow-hard-sm transition-all cursor-hover">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="contact-email"
+                                class="font-mono font-bold mb-1 uppercase text-xs">Coordinates</label>
+                            <input type="email" id="contact-email" name="email" placeholder="EMAIL ADDRESS" required
+                                class="bg-white dark:bg-neo-black border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:text-black focus:shadow-hard-sm transition-all cursor-hover">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="contact-message"
+                                class="font-mono font-bold mb-1 uppercase text-xs">Transmission</label>
+                            <textarea rows="4" id="contact-message" name="message" placeholder="PROJECT DETAILS..."
+                                required
+                                class="bg-white dark:bg-neo-black border-2 border-black p-3 font-bold focus:outline-none focus:bg-neo-yellow focus:text-black focus:shadow-hard-sm transition-all resize-none cursor-hover"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-neo-blue text-white font-black text-xl py-4 border-2 border-black shadow-hard neo-button hover:bg-neo-black hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
+                            TRANSMIT DATA
+                        </button>
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-white py-16 px-4 border-t-8 border-neo-green font-mono relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
+            <div class="col-span-1 md:col-span-2">
+                <h2 class="text-4xl font-black mb-6">RAHUL.</h2>
+                <p class="text-gray-400 max-w-sm">
+                    Designing for the future with the raw aesthetics of the past. No cookies, no trackers, just code.
+                </p>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-neo-green mb-4 border-b border-gray-700 pb-2">SITEMAP</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#"
+                            class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">Home</a>
+                    </li>
+                    <li><a href="#projects"
+                            class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">Works</a>
+                    </li>
+                    <li><a href="#about"
+                            class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">About</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-bold text-neo-green mb-4 border-b border-gray-700 pb-2">SOCIALS</h3>
+                <div class="flex gap-4">
+                    <a href="https://leetcode.com/u/RJ_here/" target="_blank" rel="noopener noreferrer"
+                        class="text-2xl hover:text-neo-blue transition-colors cursor-hover"
+                        aria-label="LeetCode profile"><i class="ri-code-fill"></i></a>
+                    <a href="https://www.instagram.com/rj_here._/" target="_blank" rel="noopener noreferrer"
+                        class="text-2xl hover:text-neo-pink transition-colors cursor-hover"
+                        aria-label="Instagram profile"><i class="ri-instagram-fill"></i></a>
+                    <a href="https://github.com/R-Jhere/" target="_blank" rel="noopener noreferrer"
+                        class="text-2xl hover:text-neo-yellow transition-colors cursor-hover"
+                        aria-label="GitHub profile"><i class="ri-github-fill"></i></a>
+                    <a href="https://www.linkedin.com/in/rjhere/" target="_blank" rel="noopener noreferrer"
+                        class="text-2xl hover:text-neo-purple transition-colors cursor-hover"
+                        aria-label="LinkedIn profile"><i class="ri-linkedin-fill"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-16 pt-8 border-t border-gray-800 text-gray-500 text-sm">
+            <p>© 2025 RAHUL.exe // SYSTEM_END</p>
+        </div>
+
+        <div
+            class="absolute bottom-0 left-0 w-full text-[20vw] font-black text-white opacity-[0.03] leading-none select-none pointer-events-none text-center">
+            RJ_HERE </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+
+</html>
